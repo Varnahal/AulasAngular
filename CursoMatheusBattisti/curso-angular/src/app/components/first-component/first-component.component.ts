@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-first-component',
@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class FirstComponentComponent implements OnInit {
   name: String = 'Daniel';
   job:String = 'Programador'
-  cor = {
-    name: 'Tesla',
+  @Input() carro!:{name:String,year:Number}
+  car = {
+    name: this.carro,
     year: '2020',
   }
 

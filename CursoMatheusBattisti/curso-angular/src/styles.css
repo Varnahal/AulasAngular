@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+.title{
+    background-color: black;
+    color: aqua;
+}
+body{
+    padding-bottom: 500px;
+}
+.class{
+    padding: 10px;
+    border-bottom: 2px red solid;
+}

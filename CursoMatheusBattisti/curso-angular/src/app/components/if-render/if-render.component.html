@@ -1,0 +1,7 @@
+<div class="class">
+    <h1 *ngIf="logged">Usuario esta logado</h1>
+    <h1 *ngIf="name === 'Daniel'; else nameNotFound">O nome do Usuario é Daniel</h1>
+    <ng-template #nameNotFound>
+        <h1>O nome não condiz com o esperado</h1>
+    </ng-template>
+</div>
