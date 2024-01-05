@@ -2,7 +2,10 @@
 <div class="class">
     <h1>Produtos</h1>
     <div class="cards">
-        <app-exemp-card *ngFor="let product of products" [titulo] = "product.desc" [desc] = 'product.unidade'></app-exemp-card>
+        <div *ngFor="let product of products">
+            <app-exemp-card [product]="product" [titulo] = "product.desc" [desc] = 'product.unidade' [products]="products" [created_at]="product.created_at"></app-exemp-card>
+            <div><button (click)="removeProduct(product)">Excluir</button></div>
+        </div>
     </div>
     
             

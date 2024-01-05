@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListRenderComponent } from './list-render.component';
+import { PipesComponent } from './pipes.component';
 
-
-
-describe('ListRenderComponent', () => {
-  let component: ListRenderComponent;
-  let fixture: ComponentFixture<ListRenderComponent>;
+describe('PipesComponent', () => {
+  let component: PipesComponent;
+  let fixture: ComponentFixture<PipesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ListRenderComponent]
+      declarations: [PipesComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ListRenderComponent);
+    fixture = TestBed.createComponent(PipesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

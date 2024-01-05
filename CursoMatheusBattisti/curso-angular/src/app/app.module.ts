@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,10 @@ import { EmitterComponent } from './components/emitter/emitter.component';
 import { ChangeNumberComponent } from './components/change-number/change-number.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { ExempCardComponent } from './components/exemp-card/exemp-card.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { TwoWayBidingComponent } from './components/two-way-biding/two-way-biding.component';
+
+import { ListService } from './services/list.service';
 
 @NgModule({
   declarations: [
@@ -24,13 +30,17 @@ import { ExempCardComponent } from './components/exemp-card/exemp-card.component
     EmitterComponent,
     ChangeNumberComponent,
     ListRenderComponent,
-    ExempCardComponent
+    ExempCardComponent,
+    PipesComponent,
+    TwoWayBidingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListRenderComponent } from './list-render.component';
+import { TwoWayBidingComponent } from './two-way-biding.component';
 
-
-
-describe('ListRenderComponent', () => {
-  let component: ListRenderComponent;
-  let fixture: ComponentFixture<ListRenderComponent>;
+describe('TwoWayBidingComponent', () => {
+  let component: TwoWayBidingComponent;
+  let fixture: ComponentFixture<TwoWayBidingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ListRenderComponent]
+      declarations: [TwoWayBidingComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ListRenderComponent);
+    fixture = TestBed.createComponent(TwoWayBidingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

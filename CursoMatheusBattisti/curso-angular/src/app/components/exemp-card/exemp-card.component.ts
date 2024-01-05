@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Product } from '../../Product';
 
 @Component({
   selector: 'app-exemp-card',
@@ -8,4 +9,12 @@ import { Component, Input } from '@angular/core';
 export class ExempCardComponent {
   @Input() titulo:String = ''
   @Input() desc:String = ''
+  @Input() created_at:String = ''
+  @Input() product!:Product
+  @Input() products!:Product[]
+  showCreated = false
+
+  showCreatedAt(product:Product):void{
+    this.showCreated = true
+  }
 }
