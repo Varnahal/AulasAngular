@@ -22,7 +22,8 @@ export class ListRenderComponent implements OnInit {
 
   }
   removeProduct(product:Product){
-      this.products = this.listservices.remover(this.products,product)
+    this.products = this.products.filter((a)=>a.desc !== product.desc)
+    this.listservices.remover(product.id).subscribe()
   }
 
   getProducts():void{

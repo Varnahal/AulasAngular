@@ -18,6 +18,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBidingComponent } from './components/two-way-biding/two-way-biding.component';
 
 import { ListService } from './services/list.service';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ListService } from './services/list.service';
     ListRenderComponent,
     ExempCardComponent,
     PipesComponent,
-    TwoWayBidingComponent
+    TwoWayBidingComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,

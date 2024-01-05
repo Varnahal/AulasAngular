@@ -1,0 +1,12 @@
+<div class="class" *ngIf="product else loader">
+    <p>ID: {{product.id}}</p>
+    <H1>DESCRIÇÂO: {{product.desc}}</H1>
+</div>
+<ng-template #loader>
+    <div class="class">
+        <p>ID: Carregando...</p>
+        <H1>DESCRIÇÂO: Carregando...</H1>
+    </div>
+</ng-template>
+
+

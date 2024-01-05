@@ -1,9 +1,11 @@
 <div class="card">
     <div>
-        <h1>{{titulo}}</h1>
+        <a routerLink="/list/{{product.id}}">
+            <h1>{{titulo}}</h1>
+        </a>
     </div>
     <div>
-        <p>{{desc}}</p>
+        <p>{{desc}}</p>    
         <p *ngIf="showCreated">{{created_at}}</p>
         <div><button (click)="showCreatedAt(product)">Mostrar data</button></div>
     </div>

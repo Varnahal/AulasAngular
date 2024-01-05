@@ -11,10 +11,14 @@ export class ListService {
   private apiURL = 'http://localhost:3000/Products'
 
   constructor( private http:HttpClient) { }
-  remover(products:Product[],product:Product):Product[]{
-    return products.filter((a)=>a.desc !== product.desc)
+  remover(id:Number){
+    return this.http.delete<Product>(`${this.apiURL}/${id}`)
   }
   getAll():Observable<Product[]>{
     return this.http.get<Product[]>(this.apiURL)
+  }
+
+  getItem(id:Number):Observable<Product>{
+    return this.http.get<Product>(`${this.apiURL}/${id}`)
   }
 }
