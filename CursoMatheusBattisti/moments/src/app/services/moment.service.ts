@@ -12,7 +12,7 @@ import { environment } from '../../environments/environment';
 })
 export class MomentService {
   private baseApi = environment.baseApiUrl
-  private apiUrl = `${this.baseApi}api/moments`
+  private apiUrl = `${this.baseApi}api/moments/`
 
   constructor(private http:HttpClient) { }
 
@@ -21,7 +21,7 @@ export class MomentService {
   }
 
   getMoment(id:number):Observable<Response<Moment>>{
-    const Url = `${this.apiUrl}/${id}`
+    const Url = `${this.apiUrl}${id}`
     return this.http.get<Response<Moment>>(Url);
   }
 
@@ -30,12 +30,12 @@ export class MomentService {
   }
 
   removeMoment(id:number){
-    const Url = `${this.apiUrl}/${id}`
+    const Url = `${this.apiUrl}${id}`
     return this.http.delete(Url);
   }
 
   updateMoment(id:number, formData:FormData):Observable<FormData>{
-    const Url = `${this.apiUrl}/${id}`
+    const Url = `${this.apiUrl}${id}`
     return this.http.put<FormData>(Url,formData);
   }
 }

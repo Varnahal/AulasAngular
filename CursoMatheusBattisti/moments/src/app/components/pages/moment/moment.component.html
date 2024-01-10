@@ -1,6 +1,6 @@
 <div class="moment" *ngIf="moment else loading">
     <h1>{{moment.title}}</h1>
-    <img src="{{apiUrl}}uploads/{{moment.image}}" alt="{{moment.title}}">
+    <img src="{{apiUrl}}api/moments{{moment.image}}" alt="{{moment.title}}">
     <div class="about-moment">
         <h3>Sobre este momento</h3>
         <p class="moment-description">{{moment.description}}</p>
